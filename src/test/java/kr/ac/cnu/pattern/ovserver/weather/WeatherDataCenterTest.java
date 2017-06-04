@@ -13,9 +13,13 @@ public class WeatherDataCenterTest {
         WeatherData weatherData = new WeatherData(30.0f, 25.3f, 1.2f);
 
         WeatherDataCenter weatherDataCenter = new WeatherDataCenter();
-//        weatherDataCenter.setRadio(new Radio());
-//        weatherDataCenter.setTelevision(new Television());
-//        weatherDataCenter.setiPhone(new IPhone());
+        weatherDataCenter.addObserver(new IPhone());
+        weatherDataCenter.addObserver(new IPhone());
+        weatherDataCenter.addObserver(new IPhone());
+        weatherDataCenter.addObserver(new IPhone());
+        weatherDataCenter.addObserver(new IPhone());
+        weatherDataCenter.addObserver(new Television());
+        weatherDataCenter.addObserver(new Radio());
 
         // send weather data to data-center
         weatherDataCenter.notifyWeatherData(weatherData);

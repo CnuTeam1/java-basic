@@ -25,7 +25,6 @@ public class CnuLecture {
                 return teacher;
             }
         }
-
         return null;
     }
 }

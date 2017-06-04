@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.4</version>
+            <version>1.16.6</version>
         </dependency>
 
         <dependency>
@@ -44,6 +44,12 @@
             <artifactId>log4j</artifactId>
             <version>1.2.16</version>
         </dependency>
+        
+        <dependency>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-resources-plugin</artifactId>
+    		<version>2.4.3</version>
+		</dependency>
     </dependencies>
 
 

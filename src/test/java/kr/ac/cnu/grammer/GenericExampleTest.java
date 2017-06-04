@@ -3,6 +3,7 @@ package kr.ac.cnu.grammer;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -23,7 +24,14 @@ public class GenericExampleTest {
 
     @Test
     public void 오름차순_테스트() {
-        List<Person> personList = genericExample.findAllByOrderByAgeAsc();
+        List<Person> personList = new ArrayList<>();
+        personList.add(new Person(1, "Mina"));
+        personList.add(new Person(10, "Robin"));
+        personList.add(new Person(5, "Ian"));
+
+        personList = GenericExample.findAllByOrderByAge(personList, true);
+
+        System.out.println(personList);
 
         Person base = null;
         for (Person person : personList) {
@@ -37,8 +45,5 @@ public class GenericExampleTest {
         }
     }
 
-    @Test
-    public void 내림차순_테스트() {
-    }
 
 }

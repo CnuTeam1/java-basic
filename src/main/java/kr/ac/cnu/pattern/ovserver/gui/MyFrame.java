@@ -27,8 +27,52 @@ public class MyFrame extends JFrame {
 
         JButton button = new JButton();
         button.setText("CLICK");
+
+
+
+
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("버튼이 눌렸다!!");
+            }
+        });
+
+
+
+
+        button.addActionListener(e -> {
+            System.out.println("버튼이 눌렸다!!");
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+        button.addActionListener(new LabelGenerator());
+        button.addActionListener(new LabelGenerator());
+
+
         panel.add(button);
 
         mainFrame.setVisible(true);
+    }
+
+    public class LabelGenerator implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JLabel label = new JLabel("라벨");
+            panel.add(label);
+            panel.revalidate();
+            panel.repaint();
+        }
     }
 }
